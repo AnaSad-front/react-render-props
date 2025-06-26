@@ -99,6 +99,7 @@ export default function App() {
         <List
           title="Products"
           items={products}
+          // The render props pattern
           render={(product) => (
             <ProductItem key={product.productName} product={product} />
           )}
@@ -107,6 +108,7 @@ export default function App() {
         <List
           title="Companies"
           items={companies}
+          // The render props pattern
           render={(company) => (
             <CompanyItem
               key={company.companyName}
