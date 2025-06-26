@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// name need starts with "with"-word
 export default function withToggles(WrappedComponent) {
   return function List(props) {
     const [isOpen, setIsOpen] = useState(true);
@@ -20,8 +21,8 @@ export default function withToggles(WrappedComponent) {
             {isOpen ? <span>&or;</span> : <span>&and;</span>}
           </button>
         </div>
+        {/*  Higher-ordered components (HOC) */}
         {isOpen && <WrappedComponent {...props} items={displayItems} />}
-
         <button onClick={() => setIsCollapsed((isCollapsed) => !isCollapsed)}>
           {isCollapsed ? `Show all ${props.items.length}` : "Show less"}
         </button>

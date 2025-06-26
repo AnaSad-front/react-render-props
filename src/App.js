@@ -88,6 +88,7 @@ function ProductList({ title, items }) {
   );
 }
 
+// Higher-ordered components (HOC)
 const ProductListWithToggles = withToggles(ProductList);
 
 export default function App() {
@@ -121,6 +122,7 @@ export default function App() {
 
       <div className="col-2">
         <ProductList title="Products HOC" items={products} />
+        {/*  Higher-ordered components (HOC) */}
         <ProductListWithToggles title="Products HOC" items={products} />
       </div>
     </div>
